@@ -44,6 +44,18 @@ void RandNum(int size_arr, int range) {
 
 }
 
+void SortedNum(int size_arr)
+{
+    int* my_arr = (int*)malloc(sizeof(int) * size_arr);
+
+    for (int i = 0; i < size_arr; i++)
+    {
+        my_arr[i] = i + 1;
+        printf("%d  ", my_arr[i]);
+    }
+}
+
+
 void myInputBuffer(void) {
     while (getchar() != '\n');
 }
@@ -62,6 +74,13 @@ int main(void) {
     myInputBuffer();
 
     RandNum(my_num, my_range);
+
+
+    printf("생성하실 배열의 크기를 입력해주세요.\n입력 : ");
+    scanf("%d", &my_num);
+    myInputBuffer();
+
+    SortedNum(my_num);
 
     return 0;
 }
